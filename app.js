@@ -51,8 +51,11 @@ function generateCss(){
   
   textCopy.onclick = e => {
    //let html = "<h4 id="textPic" >Скопировано в буфер обмена</h4>"
-   textCopy.insertAdjacentHTML('afterend', '<div style="position:absolute; top: 72%;" id="cpd"><h3>Скопировано в буфер обмена</h3></div>');
-   setTimeout(_=> cpd.remove(), 1000);
+   textCopy.insertAdjacentHTML('afterend', '<div id="cpd"><h3>Скопировано в буфер обмена</h3></div>');
+   setTimeout( () => {
+    cpd.remove()
+    
+   }, 1000 );
      
   } ;
 
